@@ -106,7 +106,13 @@ database.ref().on(
         // ======================================================
         // =========== UPDATING HTML TO REFLECT DATA ============
         // ======================================================
-        $("#train-name").append("<td>" + (childSnapshot.val().name) + "</td>");
+
+
+var nameDisplay = 
+$("#train-name").text(childSnapshot.val().name);
+
+
+        // $("#train-name").append("<td>".text(childSnapshot.val().name) + "</td>");
 
 
 

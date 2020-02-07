@@ -13,6 +13,12 @@ h1 {
     text-align: center;
 }
 
+#logged-trains {
+    background-color: yellow;
+    color: black;
+    font-family: 'Overpass Mono', monospace;
+
+}
 
 /* font-family: 'Black Ops One', cursive;
 font-family: 'Electrolize', sans-serif;
