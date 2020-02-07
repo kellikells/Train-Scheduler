@@ -36,7 +36,7 @@ $("button").on("click", function (event) {
     frequency = parseInt($("#frequency-input").val().trim());
     firstTrain = $("#first-train-input").val().trim();
 
-    //check click function works;
+    // --- check click function works;
     console.log(name);
     console.log(destination);
     console.log(frequency);
@@ -51,11 +51,85 @@ $("button").on("click", function (event) {
         firstTrain: firstTrain,
         dateAdded: firebase.database.ServerValue.TIMESTAMP
     });
+});
+// ===== FIREBASE WATCHER + initial loader ======
+// ==============================================
+database.ref().on(
+    "child_added",
+    function (childSnapshot) {
 
-    // ==============================================
+        // --- info of the new train added
+        console.log(childSnapshot.val().name);
+        console.log(childSnapshot.val().destination);
+        console.log(childSnapshot.val().frequency);
+        console.log(childSnapshot.val().firstTrain);
+
+        // ========================================================
+        // using moment to calculate: next arrival time & mins left
+        // ========================================================
+
+        // --- store data for frequency (in minutes)
+        var frequencyInMinutes = childSnapshot.val().frequency;
+        console.log("frequency in minutes " + frequencyInMinutes);
+
+        // --- current time formatted to match data
+        var currentTime = moment().format("HH:mm");
+        console.log("this is the current time " + currentTime);
+
+        // --- store data for firstTrain 
+        var firstTime = childSnapshot.val().firstTrain;
+
+        // --- pushes back firstTime 1 year (calculation purposes)
+        var referenceTime = moment(firstTime, "HH:mm").subtract(1, "years");
+        console.log(referenceTime);
+
+        // var differenceTime = (moment(currentTime)).diff(moment(referenceTime), "minutes");
+        // console.log(differenceTime);
+
+        var diffTime = moment().diff(moment(referenceTime), "minutes");
+        console.log("this is the difference " + diffTime);
+
+        // --- how many minutes has passed since last train
+        var minutesSinceLast = diffTime % frequencyInMinutes;
+        console.log("minutes since last train " + minutesSinceLast);
+
+        // --- MINUTES UNTIL NEXT TRAIN ---
+        var minutesUntilNext = frequencyInMinutes - minutesSinceLast;
+        console.log("minutes until next train " + minutesUntilNext);
+
+        var nextTrain = moment().add(minutesUntilNext, "minutes");
+
+        // --- NEXT TRAIN ARRIVAL TIME ---
+        var nextTrainTime = moment(nextTrain).format("HH:mm");
+        console.log("Time for the next train formatted " + nextTrainTime);
+
+        // ======================================================
+        // =========== UPDATING HTML TO REFLECT DATA ============
+        // ======================================================
+        $("#train-name").append("<td>" + (childSnapshot.val().name) + "</td>");
 
 
-})
+
+
+
+
+
+        // console.log(childSnapshot.val().name);
+        // console.log(childSnapshot.val().destination);
+        // console.log(childSnapshot.val().frequency);
+        // console.log(childSnapshot.val().firstTrain);
+
+
+
+
+    },
+    // --- this handles the errors:
+    function (errorObject) {
+        console.log("errors: " + errorObject.code);
+    });
+
+
+  
 
     // --- create <td>s for:
     // name, destination, frequency, next train time, mins away
