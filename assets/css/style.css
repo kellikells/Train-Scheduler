@@ -2,18 +2,9 @@
     box-sizing: border-box;
 }
 
-
-/* =================================== */
-/* ------------- HEADER -------------- */
-/* =================================== */
-/* title text */
-h1 {
-    font-family: 'Black Ops One', cursive;
-    text-align: center;
+body {
+    background-color: #069;
 }
-/* =================================== */
-/* -------------- TABLE -------------- */
-/* =================================== */
 
 /* used to test if added trains are displaying */
 #logged-trains {
@@ -24,8 +15,33 @@ h1 {
 
 
 /* =================================== */
+/* ------------- HEADER -------------- */
+/* =================================== */
+
+/* title text */
+h1 {
+    font-family: 'Black Ops One', cursive;
+    text-align: center;
+}
+
+
+/* =================================== */
+/* -------------- TABLE -------------- */
+/* =================================== */
+
+
+
+
+/* =================================== */
 /* -------------- FORM --------------- */
 /* =================================== */
+#myForm {
+    border: solid 2px lightgrey;
+    background-color: #6ac;
+    border-radius: 15px;
+ 
+}
+
 
 
 
@@ -46,7 +62,6 @@ font-family: 'Average Sans', sans-serif; */
 /* WRITING OVER BOOTSTRAP WITH MY-ID's */
 /* =================================== */
 
-
 #myContainer {
     padding: 10px 10px 15px 10px;
 }
@@ -56,5 +71,5 @@ font-family: 'Average Sans', sans-serif; */
 }
 
 #myForm {
-    padding: 12px; /*matches <thead> bootstrap
+    padding: 12px;         /*matches <thead> bootstrap*/
 }
