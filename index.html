@@ -11,26 +11,31 @@
 
   <!-- reset css -->
   <link rel="stylesheet" href="assets/css/reset.css">
-    <!-- Bootstrap CSS -->
+  <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
     integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    
-
+  <!-- google fonts -->
+  <link
+    href="https://fonts.googleapis.com/css?family=Average+Sans|Black+Ops+One|Electrolize|Overpass+Mono|Rubik+Mono+One&display=swap"
+    rel="stylesheet">
 
   <!-- jquery script -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <!-- Link to Moment.js  -->
   <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+  <!-- Firebase Core JavaScript Link -->
+  <script src="https://www.gstatic.com/firebasejs/6.0.4/firebase-app.js"></script>
+  <!-- Specific Firebase products we want (Database) -->
+  <script src="https://www.gstatic.com/firebasejs/6.0.4/firebase-database.js"></script>
 
   <!-------------MY LINKS------------->
   <link rel="stylesheet" type="text/css" href="assets/css/style.css">
-  <script type="text/javascript" src="assets/javascript/app.js"></script>
 
 </head>
 
 <body>
 
-  <div class="container">
+  <div class="container myContainer">
 
     <!--====================================== -->
     <!--==== HEADER : bootstrap jumbotron ==== -->
@@ -68,7 +73,7 @@
           <tbody id="logged-trains">
             <tr>
               <td></td>
-             
+
             </tr>
           </tbody>
         </table>
@@ -93,11 +98,11 @@
             <label for="frequency-input">Frequency (min):</label>
             <input type="text" class="form-control" id="frequency-input" placeholder="30 min">
           </div>
-          <div class="form-group"> 
+          <div class="form-group">
             <label for="first-train-input">First Train Time (HH mm):</label>
             <input type="text" class="form-control" id="first-train-input" placeholder="5:00 pm">
           </div>
-      
+
           <button type="submit" class="btn btn-primary">Submit</button>
         </form>
       </div>
@@ -115,18 +120,8 @@
 
 
 
-  <!-- JQuery -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-
-  <!-- my javascript -->
-  <script type="text/javascript" src="assets/javascript/app.js"></script>
-
-
-  <!-- Firebase Core JavaScript Link -->
-  <script src="https://www.gstatic.com/firebasejs/6.0.4/firebase-app.js"></script>
-
-  <!-- Specific Firebase products we want (Database) -->
-  <script src="https://www.gstatic.com/firebasejs/6.0.4/firebase-database.js"></script>
+    <!-- my javascript -->
+    <script type="text/javascript" src="assets/javascript/app.js"></script>
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
