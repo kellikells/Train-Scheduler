@@ -3,25 +3,58 @@
 }
 
 
-.myContainer {
-    min-width: 460px;
-    width: 100%;
-}
-
+/* =================================== */
+/* ------------- HEADER -------------- */
+/* =================================== */
+/* title text */
 h1 {
     font-family: 'Black Ops One', cursive;
     text-align: center;
 }
+/* =================================== */
+/* -------------- TABLE -------------- */
+/* =================================== */
 
+/* used to test if added trains are displaying */
 #logged-trains {
     background-color: yellow;
     color: black;
     font-family: 'Overpass Mono', monospace;
-
 }
+
+
+/* =================================== */
+/* -------------- FORM --------------- */
+/* =================================== */
+
+
+
+
 
 /* font-family: 'Black Ops One', cursive;
 font-family: 'Electrolize', sans-serif;
 font-family: 'Rubik Mono One', sans-serif;
 font-family: 'Overpass Mono', monospace;
 font-family: 'Average Sans', sans-serif; */
+
+
+
+
+
+
+
+/* WRITING OVER BOOTSTRAP WITH MY-ID's */
+/* =================================== */
+
+
+#myContainer {
+    padding: 10px 10px 15px 10px;
+}
+
+#myJumbotron {
+    padding: 2rem;
+}
+
+#myForm {
+    padding: 12px; /*matches <thead> bootstrap
+}
