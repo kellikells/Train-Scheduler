@@ -1,18 +1,13 @@
 * {
-    box-sizing: border-box;
+     box-sizing: border-box;
 }
 
 body {
-    background-color: #069;
+     background-image: url("../images/back-train.jpeg");
+     background-repeat: no-repeat;
+     background-position: center;
+     background-size: cover;       /*resize image to cover entire conainer*/
 }
-
-/* used to test if added trains are displaying */
-#logged-trains {
-    background-color: yellow;
-    color: black;
-    font-family: 'Overpass Mono', monospace;
-}
-
 
 /* =================================== */
 /* ------------- HEADER -------------- */
@@ -20,38 +15,70 @@ body {
 
 /* title text */
 h1 {
-    font-family: 'Black Ops One', cursive;
-    text-align: center;
+     font-family: "Black Ops One", cursive;
+     text-align: center;
 }
 
+#myJumbotron {
+     padding: 2rem;
+     border-radius: 20px;
+     border: 2px double #eff;
+     background-color: #046;
+     color: #eff;
+}
+
+#myJumboCaption {
+     font-family: "Electrolize", sans-serif;
+     opacity: 0.75;
+}
 
 /* =================================== */
 /* -------------- TABLE -------------- */
 /* =================================== */
 
+#myTable {
+     border: solid 2px lightgrey;
+     background-color: #6ac;
+     font-family: "Overpass Mono", monospace;
+}
+/* used to test if added trains are displaying */
+#logged-trains {
+     background-color: yellow;
+     color: black;
 
-
+     /* font-family: 'Rubik Mono One', sans-serif; */
+}
 
 /* =================================== */
 /* -------------- FORM --------------- */
 /* =================================== */
 #myForm {
-    border: solid 2px lightgrey;
-    background-color: #6ac;
-    border-radius: 15px;
- 
+     border: solid 3px lightgrey;
+     background-color: #6ac;
+     color: #046;
+     border-radius: 15px;
+     padding: 12px; /*matches <thead> bootstrap*/
+     font-family: 'Coda Caption', sans-serif;
 }
 
+#train-name-input,
+#destination-input,
+#frequency-input,
+#first-train-input {
+     font-family: "Average Sans", sans-serif;
+     border: solid 2px 
+}
 
+#train-name-input:focus,
+#destination-input:focus, 
+#frequency-input:focus,
+#first-train-input:focus {
+     background-color: #fe1;
+}
 
+/* font-family: 'Electrolize', sans-serif; */
 
-
-
-/* font-family: 'Black Ops One', cursive;
-font-family: 'Electrolize', sans-serif;
-font-family: 'Rubik Mono One', sans-serif;
-font-family: 'Overpass Mono', monospace;
-font-family: 'Average Sans', sans-serif; */
+/* font-family: "Rubik Mono One", sans-seri?f; */
 
 
 
@@ -63,13 +90,5 @@ font-family: 'Average Sans', sans-serif; */
 /* =================================== */
 
 #myContainer {
-    padding: 10px 10px 15px 10px;
-}
-
-#myJumbotron {
-    padding: 2rem;
-}
-
-#myForm {
-    padding: 12px;         /*matches <thead> bootstrap*/
+     padding: 10px 10px 15px 10px;
 }
