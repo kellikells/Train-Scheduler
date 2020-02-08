@@ -6,7 +6,7 @@ body {
      background-image: url("../images/back-train.jpeg");
      background-repeat: no-repeat;
      background-position: center;
-     background-size: cover;       /*resize image to cover entire conainer*/
+     background-size: cover; /*resize image to cover entire conainer*/
 }
 
 /* =================================== */
@@ -58,7 +58,7 @@ h1 {
      color: #046;
      border-radius: 15px;
      padding: 12px; /*matches <thead> bootstrap*/
-     font-family: 'Coda Caption', sans-serif;
+     font-family: "Coda Caption", sans-serif;
 }
 
 #train-name-input,
@@ -66,11 +66,11 @@ h1 {
 #frequency-input,
 #first-train-input {
      font-family: "Average Sans", sans-serif;
-     border: solid 2px 
+     border: solid 2px;
 }
 
 #train-name-input:focus,
-#destination-input:focus, 
+#destination-input:focus,
 #frequency-input:focus,
 #first-train-input:focus {
      background-color: #fe1;
@@ -79,12 +79,6 @@ h1 {
 /* font-family: 'Electrolize', sans-serif; */
 
 /* font-family: "Rubik Mono One", sans-seri?f; */
-
-
-
-
-
-
 
 /* WRITING OVER BOOTSTRAP WITH MY-ID's */
 /* =================================== */

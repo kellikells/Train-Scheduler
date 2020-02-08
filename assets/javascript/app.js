@@ -58,15 +58,13 @@ database.ref().on(
     "child_added",
     function (childSnapshot) {
 
-        // --- info of the new train added
-        console.log(childSnapshot.val().name);
-        console.log(childSnapshot.val().destination);
-        console.log(childSnapshot.val().frequency);
-        console.log(childSnapshot.val().firstTrain);
-
         // ========================================================
         // using moment to calculate: next arrival time & mins left
         // ========================================================
+
+        // --- info of the new train added
+        console.log(childSnapshot.val().firstTrain);
+        console.log(childSnapshot.val().frequency);
 
         // --- store data for frequency (in minutes)
         var frequencyInMinutes = childSnapshot.val().frequency;
@@ -107,27 +105,33 @@ database.ref().on(
         // =========== UPDATING HTML TO REFLECT DATA ============
         // ======================================================
 
+        // --- new train info for HTML
+        console.log(childSnapshot.val().name);
+        console.log(childSnapshot.val().destination);
+        console.log(childSnapshot.val().frequency);
+        console.log(nextTrainTime);
+        console.log(minutesUntilNext);
 
-var nameDisplay = 
-$("#train-name").text(childSnapshot.val().name);
+        console.log(typeof (nextTrainTime));   // string
 
+        // --- array of train info
+        var trainArr = [
+            (childSnapshot.val().name),
+            (childSnapshot.val().destination),
+            (childSnapshot.val().frequency),
+            (nextTrainTime),
+            (minutesUntilNext)];
 
-        // $("#train-name").append("<td>".text(childSnapshot.val().name) + "</td>");
+        // --- creates <tr> and appends to HTML 
+        var trainDisplay = $("#logged-trains").append("<tr>");
 
+        // === loop through array of train info ===
+        // --- place them as text to <td>trainData 
+        // --- append them to <tr>trainRow
+        for (let i = 0; i < trainArr.length; i++) {
 
-
-
-
-
-
-        // console.log(childSnapshot.val().name);
-        // console.log(childSnapshot.val().destination);
-        // console.log(childSnapshot.val().frequency);
-        // console.log(childSnapshot.val().firstTrain);
-
-
-
-
+            var trainRow = trainDisplay.append($("<td>").text(trainArr[i]));
+        }
     },
     // --- this handles the errors:
     function (errorObject) {
@@ -135,7 +139,7 @@ $("#train-name").text(childSnapshot.val().name);
     });
 
 
-  
+
 
     // --- create <td>s for:
     // name, destination, frequency, next train time, mins away
