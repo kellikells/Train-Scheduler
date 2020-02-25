@@ -16,3 +16,7 @@ Using moment.js, the app calculates the time of the next train arrival for each 
   - .trim()
   - .push()
 
+![overall image](assets/images/overall.jpg)
+![app in use](assets/images/playing.jpg)
+
+Link to deployed project: https://kellikells.github.io/Train-Scheduler/
