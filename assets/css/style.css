@@ -9,6 +9,12 @@ body {
      background-size: cover; /*resize image to cover entire conainer*/
 }
 
+/* WRITING OVER BOOTSTRAP WITH MY-ID's */
+/* =================================== */
+#myContainer {
+     padding: 10px 10px 15px 10px;
+}
+
 /* =================================== */
 /* ------------- HEADER -------------- */
 /* =================================== */
@@ -41,12 +47,12 @@ h1 {
      background-color: #6ac;
      font-family: "Overpass Mono", monospace;
 }
-/* used to test if added trains are displaying */
-#logged-trains {
-     background-color: yellow;
-     color: black;
 
-     /* font-family: 'Rubik Mono One', sans-serif; */
+/* t-body */
+#logged-trains {
+     background-color: silver;
+     color: black;
+     font-family: 'Rubik Mono One', sans-serif;
 }
 
 /* =================================== */
@@ -80,9 +86,4 @@ h1 {
 
 /* font-family: "Rubik Mono One", sans-seri?f; */
 
-/* WRITING OVER BOOTSTRAP WITH MY-ID's */
-/* =================================== */
 
-#myContainer {
-     padding: 10px 10px 15px 10px;
-}

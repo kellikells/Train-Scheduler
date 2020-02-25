@@ -139,15 +139,3 @@ database.ref().on(
     });
 
 
-
-
-    // --- create <td>s for:
-    // name, destination, frequency, next train time, mins away
-
-//     var nameData = $("<td>").text(tName);
-//     var destinationData = $("<td>")
-
-
-
-//        // --- create <tr> to hold <td>s:
-// var oneTrain = $("<tr>").attr("id", tName);
